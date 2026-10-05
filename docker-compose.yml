@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: student-registration-app
+    ports:
+      - "3000:3000"
+    volumes:
+      # Persist student.json data on the host machine
+      - ./student.json:/usr/src/app/student.json
+    restart: unless-stopped

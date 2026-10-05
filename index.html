@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<main class="card">
+    <h1>Student Registration</h1>
+    <p class="subtitle">Enter your details to create an account</p>
+
+    <form id="registrationForm" novalidate>
+        <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name">
+            <div class="error" id="nameError"></div>
+        </div>
+
+        <div class="field">
+            <label for="email">Email ID</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email">
+            <div class="error" id="emailError"></div>
+        </div>
+
+        <div class="field">
+            <label for="mobile">Mobile Number</label>
+            <input id="mobile" name="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="Enter 10-digit mobile number" autocomplete="tel">
+            <div class="error" id="mobileError"></div>
+        </div>
+
+        <div class="field">
+            <label for="branch">Branch</label>
+            <select id="branch" name="branch">
+                <option value="">Select your branch</option>
+                <option>Computer Science Engineering</option>
+                <option>Information Technology</option>
+                <option>Electronics and Communication</option>
+                <option>Electrical Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>Civil Engineering</option>
+            </select>
+            <div class="error" id="branchError"></div>
+        </div>
+
+        <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Minimum 6 characters" autocomplete="new-password">
+            <div class="error" id="passwordError"></div>
+        </div>
+
+        <button type="submit">Register</button>
+        <div class="success" id="successMessage" role="status">Registration successful!</div>
+    </form>
+</main>
+</body>
+</html>
